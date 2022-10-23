@@ -23,7 +23,7 @@ urlpatterns = [
     path('',HomePage,name='Home'),
     path('products/',ProductsPage,name='products'),
     path('details/<slug:slug>/',ProductDetails,name='details'),
-    path('<slug:category_slug>/',ProductsPage,name='products_by_category'),
+    path('category/<slug:category_slug>/',ProductsPage,name='products_by_category'),
     path('admin/', admin.site.urls),
 ]
 if settings.DEBUG:
