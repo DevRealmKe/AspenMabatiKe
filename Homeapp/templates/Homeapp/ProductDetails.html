@@ -1,0 +1,54 @@
+{% extends 'base.html' %} {% block Body%}
+<section class="about-us">
+  <div class="row">
+    <div class="about-col">
+      <h1>Product Details</h1>
+    </div>
+  </div>
+</section>
+<div class="container" style="margin-bottom: 100px !important;">
+  <div class="row">
+    <div class="col">
+      <div class="row">
+        <div class="col-12 col-sm-12 main" xs="12" sm="12">
+          <div class="card">
+            <img
+              src="{{ product.product_image.url }}"
+              class="card-img-top"
+              alt="..."
+            />
+            
+          </div>
+        </div>
+        <!-- <div class="col">
+          <div class="row">
+            <div class="col">
+              <div class="card" style="width: 5rem">
+                <img
+                  src="https://images.unsplash.com/photo-1518736346281-76873166a64a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+                  class="card-img-top"
+                  alt="..."
+                />
+                
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+    <div class="col" sm="6">
+      <div class="card" style="height: 100%">
+        <div class="card-body">
+          <h2 class="card-title">{{product.product_name}}</h2>
+          <h6 class="card-subtitle mb-2 text-muted">
+            Category : {{product.product_category}}
+          </h6>
+          <p class="card-text">{{product.product_desc}}</p>
+          <!-- <a href="#" class="card-link">Card link</a>
+                      <a href="#" class="card-link">Another link</a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock%}
