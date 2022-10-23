@@ -10,7 +10,9 @@ body{
 .header{
 	min-height: 70px;
 	width: 100%;
-	background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/roof1.png);
+	/* background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url('../images/roof1.png');
+     */
+     background-color: #464C61;
     background-position: center;
     background-size: cover;
     position: relative;
@@ -58,9 +60,10 @@ nav img{
     border: none;
     height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/roof1.png);
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url('../images/roof1.png');
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
     position: relative;
 }
 .text-box{
