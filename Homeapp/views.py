@@ -1,6 +1,8 @@
+
 from django.shortcuts import render, get_object_or_404
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .models import *
+from django.core.mail import send_mail
 
 # Create your views here.
 
@@ -74,8 +76,26 @@ def ProductDetails(request, slug):
 
 
 def ContactUs(request):
+    if request.method =="POST":
+        contact_name = request.POST['contact_name']
+        contact_email = request.POST['contact_email']
+        contact_subject = request.POST['contact_subject']
+        contact_message = request.POST['contact_message']
 
-    return render(request, "Homeapp/ContactUs.html")
+        print(contact_message)
+        send_mail(
+            contact_subject + contact_name,
+            contact_message,
+            contact_email,
+            ['wangenyesimon@gmail.com'],
+            fail_silently=False,
+        )
+
+        return render(request, "Homeapp/ContactUs.html")
+    else:
+        return render(request, "Homeapp/ContactUs.html")
+
+    
 
 def AboutUs(request):
 

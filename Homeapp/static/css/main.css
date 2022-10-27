@@ -521,8 +521,13 @@ select:hover{
     width: 100%;
 }
 .contact-us{
-    width: 80%;
-    margin: auto;
+    height: 100vh !important;
+    /* width: 80%; */
+    margin: 20px 20px;
+    align-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
 }
 .contact-col{
     flex-basis: 48%;

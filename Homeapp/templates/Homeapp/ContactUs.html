@@ -1,42 +1,69 @@
-{% extends 'base.html' %}
-
-{% block Body%}
+{% extends 'base.html' %} {% block Body%}
 <section class="contact-us">
+<div class="container">
     <div class="row">
-        <div class="contact-col">
-            <div>
-               <i class="fa fa-home"></i>
-                <span>
+        <div class="col-sm-4 col-xs-12">
+            <div class="contact-col">
+                <div>
+                    <i class="bi bi-house-fill" style="font-size: 2rem; color: rgb(8, 21, 44); padding: 5px;"></i>
+                  <span>
                     <h5>XYZ ROAD, ABC BUILDING</h5>
                     <p>Bangalore, Kartanaka, IN</p>
-                </span>
-            </div>
-            <div>
-               <i class="fa fa-phone"></i>
-                <span>
+                  </span>
+                </div>
+                <div>
+                    <i class="bi bi-telephone-fill" style="font-size: 2rem; color: rgb(8, 21, 44); padding: 5px;"></i>
+                    
+                  <span>
                     <h5>+254 791847561</h5>
                     <p>Monday to Sartuday, 10AM TO 6PM</p>
-                </span>
-            </div>
-            <div>
-               <i class="fa fa-envelope"></i>
-                <span>
+                  </span>
+                </div>
+                <div>
+                    <i class="bi bi-envelope-fill lg" style="font-size: 2rem; color: rgb(8, 21, 44); padding: 5px;"></i>
+                  <span>
                     <h5>info@codespro.com</h5>
                     <p>Email us your query</p>
-                </span>
-            </div>
+                  </span>
+                </div>
+              </div>
+              {{ contactName}}
         </div>
-        <div class="contact-col"></div>
-        
-        <form action="form-handler.php" method="post">
-            <input type="text" name="name" placeholder="Enter Your Name" required>
-            <input type="email" name="email" placeholder="Enter email address" required>
-            <input type="email" name="subject" placeholder="Enter your subject" required>
-            <textarea rows="8" name="message" placeholder="Message" required></textarea>
-            <button type="submit" class="hero-btn red-btn">SEND MESSAGE</button>
-        </form>
-        
-        
+
+        <div class="col">
+            <form method="post" class="row g-3" action="{% url 'contactus'%}">
+                {% csrf_token %}
+                <div class="col-md-6">
+                  <label for="inputName" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="inputName" name="contact_name" />
+                </div>
+                <div class="col-md-6">
+                  <label for="inputEmail" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="inputEmail" name="contact_email"/>
+                </div>
+                <div class="col-12">
+                  <label for="inputSubject" class="form-label">Subject</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputSubject"
+                    placeholder="Subject"
+                    name="contact_subject"
+                  />
+                </div>
+                <div class="col-12">
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="4" name="contact_message"></textarea>
+                      </div>
+                </div>
+              
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary">Sign in</button>
+                </div>
+              </form>
+        </div>
     </div>
+</div>
 </section>
-    {% endblock%}
+{% endblock%}
