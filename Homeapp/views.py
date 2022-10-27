@@ -71,3 +71,12 @@ def ProductDetails(request, slug):
 
     context = {"product": product}
     return render(request, "Homeapp/ProductDetails.html", context)
+
+
+def ContactUs(request):
+
+    return render(request, "Homeapp/ContactUs.html")
+
+def AboutUs(request):
+
+    return render(request, "Homeapp/AboutUs.html")

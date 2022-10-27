@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block Body%}
+<section class="contact-us">
+    <div class="row">
+        <div class="contact-col">
+            <div>
+               <i class="fa fa-home"></i>
+                <span>
+                    <h5>XYZ ROAD, ABC BUILDING</h5>
+                    <p>Bangalore, Kartanaka, IN</p>
+                </span>
+            </div>
+            <div>
+               <i class="fa fa-phone"></i>
+                <span>
+                    <h5>+254 791847561</h5>
+                    <p>Monday to Sartuday, 10AM TO 6PM</p>
+                </span>
+            </div>
+            <div>
+               <i class="fa fa-envelope"></i>
+                <span>
+                    <h5>info@codespro.com</h5>
+                    <p>Email us your query</p>
+                </span>
+            </div>
+        </div>
+        <div class="contact-col"></div>
+        
+        <form action="form-handler.php" method="post">
+            <input type="text" name="name" placeholder="Enter Your Name" required>
+            <input type="email" name="email" placeholder="Enter email address" required>
+            <input type="email" name="subject" placeholder="Enter your subject" required>
+            <textarea rows="8" name="message" placeholder="Message" required></textarea>
+            <button type="submit" class="hero-btn red-btn">SEND MESSAGE</button>
+        </form>
+        
+        
+    </div>
+</section>
+    {% endblock%}

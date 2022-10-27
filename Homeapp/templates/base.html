@@ -26,8 +26,8 @@
                 <ul>
                     <li><a href="{%url 'Home' %}">HOME</a></li>
                     <li><a href="{% url 'products'%}">OUR PRODUCTS</a></li>
-                    <li><a href="us.html">OUR COMPANY</a></li>
-                    <li><a href="contact.html">CONTACT US</a></li>
+                    <li><a href="{% url 'aboutus' %}">OUR COMPANY</a></li>
+                    <li><a href="{% url 'contactus' %}">CONTACT US</a></li>
                 </ul>
             </div>
             <i class="fa fa-bars" onclick="showmenu()"></i>
