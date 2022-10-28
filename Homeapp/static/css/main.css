@@ -27,6 +27,9 @@ nav{
 nav img{
     width: 150px; 
 }
+#menu-icons{
+    display: none !important;
+}
 .nav-links{ 
     flex: 1;
     text-align: right;
@@ -107,6 +110,14 @@ nav .fa{
 }
 
 @media(max-width: 700px){
+    #menu-icons{
+        display: block !important;
+        height: 30px ;
+        width: 30px;
+        padding: 5px;
+        font-size: 25px !important;
+        margin: 5px !important;
+    }
     .text-box h1{
         font-size: 20px
     }

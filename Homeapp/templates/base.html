@@ -22,7 +22,7 @@
         <nav>
             <a href="index.html"><img src="{% static 'images/logo1.jpg' %}" alt=""Logo></a>
             <div class="nav-links" id="navLinks">
-                <i class="fa fa-times" onclick="hidemenu()"></i>
+                <i class="bi bi-x-lg"  id="menu-icons" onclick="hidemenu()"></i>
                 <ul>
                     <li><a href="{%url 'Home' %}">HOME</a></li>
                     <li><a href="{% url 'products'%}">OUR PRODUCTS</a></li>
@@ -30,7 +30,7 @@
                     <li><a href="{% url 'contactus' %}">CONTACT US</a></li>
                 </ul>
             </div>
-            <i class="fa fa-bars" onclick="showmenu()"></i>
+            <i class="bi bi-list" id="menu-icons"  onclick="showmenu()"></i>
         </nav>
 
 	</section>
