@@ -10,9 +10,7 @@ body{
 .header{
 	min-height: 70px;
 	width: 100%;
-	/* background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url('../images/roof1.png');
-     */
-     background-color: #464C61;
+	background-image:  linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url('../images/roof1.png');
     background-position: center;
     background-size: cover;
     position: relative;
@@ -21,6 +19,7 @@ body{
 nav{
     display: flex;
     /* padding: 2% 6%; */
+    /* background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url('../images/roof1.png'); */
     justify-content: space-between;
     align-items: center;
 }
